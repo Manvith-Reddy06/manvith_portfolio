@@ -1,0 +1,70 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: #22c55e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #16a34a;
+  transform: translateY(-1px);
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.86);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.social-links a {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  border-color: rgba(34, 197, 94, 0.7);
+  background: rgba(34, 197, 94, 0.1);
+}

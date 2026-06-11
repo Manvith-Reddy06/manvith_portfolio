@@ -1,0 +1,36 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(5, 1, 11, 0.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(34, 197, 94, 0.25);
+  padding: 14px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-title {
+  color: #ffffff;
+  font-size: 1.55em;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .header-title {
+    font-size: 1.25em;
+    text-align: center;
+  }
+}

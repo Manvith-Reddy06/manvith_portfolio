@@ -1,0 +1,163 @@
+.portfolio-section {
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.08), rgba(22, 163, 74, 0.03));
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 8px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55);
+  margin-bottom: 40px;
+  padding: 30px;
+}
+
+.portfolio-section.reveal {
+  animation: sectionReveal 650ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.portfolio-section h2 {
+  font-size: 2.2em;
+  color: #ffffff;
+  border-bottom: 2px solid #22c55e;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.portfolio-section h3 {
+  color: #ffffff;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.portfolio-section p {
+  color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 5px;
+}
+
+.portfolio-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-section ul li {
+  margin-bottom: 8px;
+  padding-left: 25px;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.portfolio-section ul li::before {
+  content: '•';
+  color: #22c55e;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.date {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9em;
+}
+
+/* Specific styles for lists within sections */
+.skills-list, .publications-list, .experience-list, .projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-category {
+  flex: 1 1 45%; /* Adjust for two columns on larger screens */
+  min-width: 280px; /* Minimum width before wrapping */
+  background-color: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid rgba(34, 197, 94, 0.85);
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.skills-category h4 {
+  color: rgba(34, 197, 94, 0.95);
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.skills-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-category ul li {
+  padding-left: 0; /* Remove default bullet from global ul li */
+  margin-bottom: 5px;
+}
+
+.skills-category ul li::before {
+  content: none; /* Remove custom bullet from global ul li */
+}
+
+.publication-item, .experience-item, .project-item {
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed rgba(34, 197, 94, 0.22);
+}
+
+.publication-item:last-child, .experience-item:last-child, .project-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.publication-item h3, .experience-item h3, .project-item h3 {
+  margin-bottom: 10px;
+}
+
+.publication-item ul, .experience-item ul, .project-item ul {
+  margin-top: 10px;
+}
+
+.gate-scores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gate-score-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid rgba(34, 197, 94, 0.85);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.gate-score-card.highlight-da {
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.18), rgba(22, 163, 74, 0.06));
+  border-left: 5px solid #22c55e;
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.4), 0 18px 60px rgba(34, 197, 94, 0.22);
+}
+
+.gate-score-card h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.gate-score-card p {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .skills-category {
+    flex: 1 1 100%;
+  }
+}
